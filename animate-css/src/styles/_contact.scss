@@ -1,0 +1,52 @@
+.section_contact {
+  height: 700px;
+  position: relative;
+  #map {
+    height: 700px;
+  }
+}
+.contacts {
+  position: absolute;
+  width: 770px;
+  height: 450px;
+  background-color: #fff;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 100;
+  padding: 90px 60px;
+  &__list {
+    color: $text-color;
+    font-size: 18px;
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  &__item {
+    margin-bottom: 40px;
+    .fa {
+      margin-right: 12px;
+      color: #7e5aff;
+    }
+  }
+  &__wrap {
+    display: flex;
+    justify-content: space-between;
+  }
+  &__form {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 310px;
+  }
+  &__input {
+    width: 100%;
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #d5d9de;
+    &:hover, &:active,&:focus {
+      border-bottom: 1px solid $text-color;
+    }
+  }
+}

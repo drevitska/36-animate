@@ -1,0 +1,119 @@
+.section_news {
+  color: #fff;
+  background-image: url(../img/city-2.png),linear-gradient(45deg, rgba(60, 127, 212, .94) 0%, rgba(36, 204, 250, .94) 100%);
+  background-position: bottom;
+  background-repeat: no-repeat;
+  padding-top: 180px;
+  padding-bottom: 210px;
+}
+.new{
+  color: $text-color;
+  padding: 0 15px;
+  width: 390px;
+  overflow: hidden;
+  &__info {
+    padding: 30px 20px;
+    width: 370px;
+    height: 270px;
+    background-color: #fff;
+  }
+  &__img {
+    width: 370px;
+    background-size: cover;
+    height: 240px;
+  }
+  &__title {
+    margin: 0 0 20px 0;
+    font-family: $font-bold;
+    font-size: 22px;
+    text-transform: uppercase;
+  }
+  &__text {
+    font-family: $font-second;
+    font-size: 18px;
+    margin-bottom: 40px;
+  }
+  &__author {
+    display: flex;
+    &-img {
+      width: 60px;
+      height: 60px;
+      border-radius: 50%;
+      overflow: hidden;
+      margin-right: 20px;
+    }
+    &-name {
+      text-transform: uppercase;
+      font-family: $font-text;
+      font-size: 18px;
+    }
+    &-info {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+    }
+  }
+  &__data {
+    color: $main-color;
+  }
+}
+
+.arrow {
+  position: absolute;
+  height: 40px;
+  width: 40px;
+  top: 50%;
+  z-index: 15;
+  border: 1px solid #fff6;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+  transition: all 0.6s ease;
+  text-align: center;
+  line-height: 40px;
+  &:hover,
+  &:focus {
+    background-color: #fff6;
+    border: 1px solid #fff;
+  }
+
+}
+
+.arrow-next {
+  right: -80px;
+}
+
+.arrow-prev {
+  left: -70px;
+}
+
+#slider-news {
+  position: relative;
+
+  .slick-dots {
+    position: absolute;
+    bottom: -70px;
+    left: 50%;
+    transform: translateX(-50%);
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+  }
+
+  .slick-dots button {
+    background: none;
+    border: 2px solid #fff;
+    border-radius: 50%;
+    height: 9px;
+    width: 9px;
+    margin: 20px 40px;
+    padding: 0;
+    outline: none;
+    font-size: 0;
+  }
+
+  .slick-dots li[class="slick-active"] button {
+    background: #fff;
+  }
+}

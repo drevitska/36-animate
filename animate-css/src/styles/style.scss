@@ -1,0 +1,94 @@
+ 
+@import 'fonts.scss';
+@import 'var.scss';
+@import 'header.scss';
+@import 'what.scss';
+@import 'news.scss';
+@import 'galery.scss';
+@import 'contact.scss';
+@import 'footer.scss';
+
+
+* {
+  box-sizing: border-box;
+}
+html {
+  font-family: $font-text;
+  font-family: 'GothamBook';
+  color: #fff;
+  scroll-behavior: smooth;
+}
+
+.container {
+  width: 1170px;
+  margin: 0 auto;
+  @media screen and (max-width: 1200px) {
+    width: 960px;
+  }
+   @media screen and (max-width: 992px) {
+     width: 720px;
+   }
+  @media screen and (max-width: 768px) {
+    width: 540px;
+  }
+   @media screen and (max-width: 576px) {
+     width: 100%;
+     padding: 0;
+   }
+}
+
+.section {
+  &__button {
+    width: 225px;
+    height: 60px;
+    color: #fff;
+    background-color: $main-color; 
+    text-transform: uppercase;
+    outline: none;
+    border: none;
+    cursor: pointer;
+    &:hover {
+      box-shadow: 1px  1px 2px 2px #0005;
+      transform: scale(1.02);
+    }
+  }
+  &__title {
+    font-size: 44px;
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+    color: $text-color;
+    &:before {
+      position: absolute;
+      content: '';
+      width: 100px;
+      top: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      border-top: 1px solid $text-color;
+    }
+    &_what {
+      margin-bottom: 100px;
+    }
+    &_news {
+      color: #fff;
+      margin-bottom: 100px;
+      &:before {
+        border-top: 1px solid #fff;
+      }
+    }
+    
+  }
+
+}
+.btn {
+  padding: 20px 40px;
+  background-color: #fff;
+  border: 1px solid $text-color;
+  text-transform: uppercase;
+  font-family: $font-text;
+  font-size: 14px;
+  &:hover {
+    box-shadow: 1px 1px 2px 1px #0008;
+  }
+}

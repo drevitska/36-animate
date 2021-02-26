@@ -1,0 +1,68 @@
+
+@import url("https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap");
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: "Lato", sans-seri;
+}
+.container {
+  width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+.title {
+  text-align: center;
+}
+.table {
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 10px;
+  background: seagreen;
+}
+.cart-wrap {
+  position: relative;
+  margin: 10px;
+  font-size: 25;
+}
+.cart-wrap:hover .cart-face {
+  transform: rotate3d(1, 1, 1, 180deg);
+}
+
+.cart-wrap:hover .cart-backface {
+  transform: rotate3d(0, 1, 1, 0deg);
+}
+.cart-face {
+  width: 150px;
+  height: 220px;
+  border-radius: 10px;
+  overflow: hidden;
+  background-image: url(img/back.png);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: transform 1s;
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+}
+.cart-backface {
+  width: 150px;
+  height: 220px;
+  padding: 10px;
+  border-radius: 10px;
+  overflow: hidden;
+  border: 1px solid #000;
+  background: #fff;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: rotate3d(10, 1, 1, 180deg);
+  -webkit-backface-visibility: hidden;
+          backface-visibility: hidden;
+  transition: transform 1s;
+}
+.red {
+  color: red;
+}
